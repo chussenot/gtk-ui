@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'gtk3'
+
+app = Gtk::Application.new 'com.chuss.ui', :flags_none
+app.signal_connect :activate do |app|
+  win = Gtk::ApplicationWindow.new(app)
+  win.set_title 'Shell UI'
+  win.present
+end
+
+app.run
